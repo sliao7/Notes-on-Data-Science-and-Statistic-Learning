@@ -50,7 +50,7 @@ From the KKT conditions we can solve for optimal $w^*$ and $b^*$, plug in them i
 \text{ s.t. } \alpha_i \geq 0, i = 1, 2, ..., m\\
 \sum_i^m \alpha_i y^i = 0. 
 \end{align}
-This is a constrained quadratic programming. $L(w^*, b^*, \alpha)$ is nice and convex, and the global maximum can be found. For more details, see \href{L(w^*, b^*, \alpha)}{the slides}. The optimal $\alpha_i$ can be found by solving the dual Lagrangian problem. \\
+This is a constrained quadratic programming. $L(w^*, b^*, \alpha)$ is nice and convex, and the global maximum can be found. For more details, see \href{https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/svm.pdf}{the slides}. The optimal $\alpha_i$ can be found by solving the dual Lagrangian problem. \\
 
 After that, we can find $w, b$ in terms of $\alpha_i$ for $i$ with $x_i$ on the margins, i.e., $x_i$ being support vector. \\
 
