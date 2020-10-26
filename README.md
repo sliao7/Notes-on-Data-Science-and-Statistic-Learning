@@ -6,6 +6,7 @@ This repository is to backup my learning notes.
 
 ## Machine Learning
 * Support Vector Machine with Dual Lagrangian Explained [notes](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/SVM%20notes/svm.pdf) [slides](https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/svm.pdf)
+* Neural Networks (Logistic Regression reviewed) [notes](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/Neural%20Networks/Neural%20Networks.pdf) [slides](https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/neuralnets.pdf)
 
 ## Linear Algebra
 * Possible case of a linear system [pdf](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/Linear%20Equation%20Systems/Linear%20Equation%20Systems.pdf)
