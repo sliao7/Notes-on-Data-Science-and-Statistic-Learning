@@ -1,0 +1,9 @@
+\BOOKMARK [1][-]{section.1}{"Expressive power" of Artificial Neural Networks}{}% 1
+\BOOKMARK [1][-]{section.2}{ Logistic Regression: A simple Neural Network with one neuron}{}% 2
+\BOOKMARK [1][-]{section.3}{Adding Nonlinearity: Nonlinear Neurons \(Activation Functions\)}{}% 3
+\BOOKMARK [1][-]{section.4}{Multi-class Classification: Softmax function}{}% 4
+\BOOKMARK [1][-]{section.5}{Training neural networks: Backpropagation}{}% 5
+\BOOKMARK [1][-]{section.6}{Classification performance measures}{}% 6
+\BOOKMARK [1][-]{section.7}{Common neural network structures}{}% 7
+\BOOKMARK [2][-]{subsection.7.1}{Supervised neural networks}{section.7}% 8
+\BOOKMARK [2][-]{subsection.7.2}{Unsupervised neural networks}{section.7}% 9
