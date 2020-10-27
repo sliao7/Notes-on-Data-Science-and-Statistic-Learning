@@ -10,6 +10,7 @@
 \title{Notes on Feature Selection}
 \author {Shasha Liao \\ Georgia Tech}
 \maketitle
+Notes from \href{https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/feature_selection.pdf}{slides}.
 \section{Motivation}
 \begin{itemize}
 \item Simplify model
@@ -22,7 +23,7 @@
 \section{Major approaches for feature selection}
 \begin{itemize}
 \item Combination: evaluation metrics and search technique
-\item Evaluation metrics: Heuristics, information theoretic metirc, bias-variance tradeoffs, error probability
+\item Evaluation metrics: Heuristics, information theoretic metric, bias-variance tradeoffs, error probability
 \item Search technique: subset selection, l1-regularization 
 \end{itemize}
 
@@ -61,7 +62,7 @@ Score feature $x_i$ on class $y=c$ using MI (Mutual Information):
 $$I_{c,i} = \int \sum_{c=1}^K p(x_i, y=c) \log_2 \frac{p(x_i, y = c)}{p(x_i)p(y=c)}dx_i.$$
 Choose those feature $x_i$ for class $c$ with high $I_{c,i}$ score.
 \end{itemize}
-See the slides for an interesting example of using MI to extract key words for documents of different classes.
+See the \href{https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/feature_selection.pdf}{slides} for an interesting example of using MI to extract key words for documents of different classes.
 \section{Search technique}
 \begin{itemize}
 \item Linear Regression Model
@@ -92,14 +93,13 @@ $$\min \frac 1 m \sum_{i=1}^m (y_i - \theta^T x^i)^2 + \lambda (\alpha \|\theta\
 \end{itemize}
 
 
-\section{}
+\section{Summary}
+Keywords:
 \begin{itemize}
-\item
+\item Information Theoretic Metrics: Quantify Uncertainty, Entropy, Conditional Entropy, Mutual Information 
+\item Search Techniques: Ridge, Lasso, Elastic Net
 \end{itemize}
 \end{document}
 
-\section{}
-\begin{itemize}
-\item
-\end{itemize}
+
 \end{document}
