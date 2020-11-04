@@ -1,7 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Motivation}{}% 1
 \BOOKMARK [1][-]{section.2}{Major approaches for feature selection}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Information Theoretic Metric: Quantify the Uncertainty}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Entropy: Quantify the Uncertainty}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{A feature selection algorithm}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Search technique}{}% 6
-\BOOKMARK [1][-]{section.4}{Summary}{}% 7
+\BOOKMARK [1][-]{section.3}{Information Theoretic Metric: Quantify the Uncertainty}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Entropy: Quantify the Uncertainty}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{A feature selection algorithm}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Search technique}{}% 6
+\BOOKMARK [1][-]{section.5}{Classical approaches}{}% 7
+\BOOKMARK [1][-]{section.6}{Summary}{}% 8

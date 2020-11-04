@@ -5,6 +5,15 @@
 \usepackage{graphicx}
 \usepackage{tcolorbox}
 \usepackage{hyperref}
+\usepackage{listings}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
 
 \begin{document}
 \title{Notes on Python codes and Git commands}
@@ -22,5 +31,72 @@ There are a lot of common commands in Python and Git that I need to use very oft
 \subsection{vim}
 \begin{itemize}
 \item quit vim: \texttt{:q}
+\end{itemize}
+
+\section{Latex}
+\begin{itemize}
+\item breakable tcolorbox \\
+\begin{lstlisting}
+\usepackage[most]{tcolorbox}
+
+\begin{tcolorbox}[breakable, enhanced]
+\textbf{Solution:}
+\end{tcolorbox}
+\end{lstlisting}
+
+\item insert images \\
+\begin{lstlisting}
+\usepackage{graphicx}
+
+\includegraphics[width=0.5\textwidth]{bird1}
+\end{lstlisting}
+
+
+\item insert python code \\
+\begin{lstlisting}
+\usepackage{pythonhighlight}
+
+\begin{python}
+\end{python}
+
+\end{lstlisting}
+
+\item insert table \\
+\begin{lstlisting}
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+& Messages & Feature vectors \\
+\hline
+& million dollar offer & [0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] \\
+Spam & secret offer today & [1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] \\
+& secret is secret & [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] \\
+\hline
+& low price for valued customer & [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0] \\
+Non-spam & play secret sports today & [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0] \\
+& sports is healthy & [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0] \\
+& low price pizza & [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] \\
+ \hline
+\end{tabular}
+\end{center}
+\end{lstlisting}
+Example: 
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+& Messages & Feature vectors \\
+\hline
+& million dollar offer & [0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] \\
+Spam & secret offer today & [1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] \\
+& secret is secret & [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] \\
+\hline
+& low price for valued customer & [0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0] \\
+Non-spam & play secret sports today & [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0] \\
+& sports is healthy & [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0] \\
+& low price pizza & [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] \\
+ \hline
+\end{tabular}
+\end{center}
+
 \end{itemize}
 \end{document}

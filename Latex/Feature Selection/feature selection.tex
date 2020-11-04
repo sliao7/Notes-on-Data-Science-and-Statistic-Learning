@@ -27,7 +27,7 @@ Notes from \href{https://github.com/sliao7/CSE6740_Computational_Data_Analysis/b
 \item Search technique: subset selection, l1-regularization 
 \end{itemize}
 
-\subsection{Information Theoretic Metric: Quantify the Uncertainty}
+\section{Information Theoretic Metric: Quantify the Uncertainty}
 \begin{itemize}
 \item Select the variables that contain the most important information for the response. How to measure the importance of a variable/feature?
 \item We are uncertain about the response $Y$ before having any feature. Quantify the uncertainty using \textbf{entropy} $H(Y)$
@@ -92,14 +92,39 @@ $$argmin_\theta L(\theta) = \frac 1 m \sum_{i=1}^m (y_i - \theta^T x^i)^2 + \lam
 $$\min \frac 1 m \sum_{i=1}^m (y_i - \theta^T x^i)^2 + \lambda (\alpha \|\theta\|_2^2 + (1-\alpha)\|\theta\|_1).$$
 \end{itemize}
 
+\section{Classical approaches}
+First compute the $F-$ statistic $$F = \frac{(TSS - RSS)/n}{RSS/(m-n-1)}$$ to test the null hypothesis,
+$$H_0: \theta_1 = \theta_2 = \cdots = \theta_n = 0 $$
+versus the alternative hypothesis 
+$$H_a: \text{ at lest one } \theta_j \text{ is nonzero.}$$
+
+If the $F$-statistic is close to 1, we cannot reject the null hypothesis. Otherwise, we can reject the null hypothesis and conclude that at least one variable can help to explain the variance in the response in a linear way. 
+
+When $n > m$, we cannot use $F$-statistic and we have to apply feature selection.
+
+\begin{itemize}
+\item Forward selection \\
+Begin with a null model. Fit $n$ simple linear models and add the variable with the lowest RSS (residual sum of squares) to the null model. And continue until some stopping rule is satisfied. For example, when the $R^2$ of the multiple model reach to some threshold. 
+
+\item Backward selection \\
+Start with all variables in the model, and remove the variable with the largest $p$-value, which is the variable that is the least statistically significant. Continue until some stopping rule is satisfied. For example, when all remaining variables have a $p$-value below some threshold.
+
+\item Mixed selection \\
+Start with a null model. Keep adding variables with the best fit. But at the same time, keep checking the $p$-values of all the variables added. If some variable has a $p$-value above some threshold, remove it. Continue to perform the forward and backward steps until all variables in the model has a sufficiently low $p$-value and all the variables outside the model would have a large $p$-value if added to the model. 
+\end{itemize}
+Backward selection cannot be used if $n > m$, i.e., the number of variables is greater than the number of data points. But forward selection can always be used. Forward selection is a greedy approach, and might include redundant variables. So, mixed selection can remedy this problem. 
+
+%\section{}
+%\begin{itemize}
+%\item 
+%\end{itemize}
 
 \section{Summary}
 Keywords:
 \begin{itemize}
 \item Information Theoretic Metrics: Quantify Uncertainty, Entropy, Conditional Entropy, Mutual Information 
 \item Search Techniques: Ridge, Lasso, Elastic Net
+\item Forward selection, backward selection, mixed selection
 \end{itemize}
-\end{document}
-
 
 \end{document}
