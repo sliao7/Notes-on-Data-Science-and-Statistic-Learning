@@ -68,7 +68,7 @@ $$p(y^i = c| x^i) = \frac{\exp{\theta_c^T x^i}}{\sum_{c'} \exp{\theta_{c'}^T x^i
 \section{Classification performance measures}
 \begin{itemize}
 \item Mis-classification error: $$\frac{\# \text{mis-classified samples}}{\#\text{total}}$$
-\item Confusion matrix: columns are actual classes and rows are predicted classes.
+\item Confusion matrix: columns are actual classes and rows are predicted classes. Confusion matrix makes it easy for us to see what classes our model is struggling with. 
 \item Precision and Recall: $$\text{Precision} = \frac{TP}{TP + FP} \quad \text{Recall} = \frac{TP}{TP + FN}$$
 \begin{itemize}
 \item Defined for each class. Imagine you look at all the images predicted to be cats. Then think about the following two questions. 
@@ -77,7 +77,14 @@ Ex: what proportion of predicted cats are actually cats?
 \item Recall: what proportion of actual positives was identified correctly? \\
 Ex: what proportion of actual cats was identified correctly? 
 \end{itemize}
-\item F1 score: the harmonic average of precision and recall, taking values between 0 and 1.
+\item F1 score: the harmonic average of precision and recall, taking values between 0 and 1. \\
+$$\frac{1}{\text{F1}} = \frac 1 2 (\frac{1}{\text{Precision}} + \frac{1}{\text{Recall}}) .$$
+We consider the harmonic mean of Precision and Recall because they have the same numerator. Moreover, if any one of them is small, the harmonic mean will also be small. In other words, the harmonic mean is large only when both Precision and Recall are large. This is different from the arithmetic mean where a large value and a small value will still lead to a pretty large mean. \\
+
+Ex: A data set will 1 A and infinitely many Bs. The classifier predicts every data to be in class A. \\
+This classifier has precision = 0 but recall = 1. \\
+Arithmetic mean: 0.5. \\
+Harmonic mean: 0.
 \end{itemize}
 
 \section{Common neural network structures}
