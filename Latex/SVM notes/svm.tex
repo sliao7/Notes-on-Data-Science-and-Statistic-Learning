@@ -70,7 +70,23 @@ When the data is not linearly separable, we allow a few points to violate the ha
 \min_{w,b,\xi} \frac 1 2 \|w\|^2 + C\sum_{i=1}^m \xi^i \\
 \text{ s.t. }  y^i(w^Tx^i + b) \geq 1 - \xi^i, \xi^i \geq 0, \forall i.
 \end{align*}
-Question: can $\xi^i \geq 1$?
+Now the examples are allowed to have functional margin less than 1, and if an example has a margin $ 1 - \xi^i$, we would pay a cost of the objective function being increased by $C\xi^i$. The parameter $C$ controls the relative weighting between the twin goals of making the $\|w\|^2$ large (which makes the margin small) and of ensuring that most examples have functional margin at least 1. \\
+\begin{itemize}
+\item If $C$ is large, the model will not allow examples to have functional margin less than 1. Only in this case, we achieve maximal margin classifier. 
+\item If $C$ is small, the model allows for incorrectly classified examples and has a wider margin. This is good for the situation when we have outliers and we don't want to affect the decision boundary. 
+\end{itemize}
+\section{Choosing SVM Parameters}
+Choosing $C$:
+\begin{itemize}
+\item Large $C \Rightarrow$ overfitting, higher variance,  lower bias
+\item Small $C \Rightarrow$ underfitting, low variance, high bias 
+\end{itemize}
+Choose $\sigma^2$ for Gaussian Kernel:
+\begin{itemize}
+\item Large $\sigma^2 \Rightarrow$ underfitting, low variance, high bias 
+\item Small $\sigma^2 \Rightarrow$ overfitting, higher variance,  lower bias
+\end{itemize}
 
+The above optimization problem can be solved using SMO algorithm. 
 \end{itemize}
 \end{document}
