@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{CART: Classification And Regression Tree \(Breiman et al. 1984\)}{}% 1
+\BOOKMARK [1][-]{section.2}{Regression Tree}{}% 2
+\BOOKMARK [1][-]{section.3}{Tree pruning}{}% 3
+\BOOKMARK [1][-]{section.4}{Classification Tree}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Different measures of errors Qj\(J\)}{section.4}% 5
+\BOOKMARK [1][-]{section.5}{Pros and Cons of decision tree}{}% 6
+\BOOKMARK [1][-]{section.6}{Random forest for regression and for classification}{}% 7
+\BOOKMARK [1][-]{section.7}{Bagging}{}% 8
+\BOOKMARK [1][-]{section.8}{Bootstrap}{}% 9
+\BOOKMARK [1][-]{section.9}{Random forest}{}% 10
+\BOOKMARK [1][-]{section.10}{OOB error}{}% 11
+\BOOKMARK [1][-]{section.11}{Boosting trees}{}% 12
+\BOOKMARK [1][-]{section.12}{Forward stagewise optimization for boosting trees}{}% 13

@@ -1,0 +1,197 @@
+\documentclass[twoside,12pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,fullpage,amssymb}
+\usepackage{algorithm,hyperref}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Notes on Decision Tree and Random Forest}
+\author {Shasha Liao \\ Georgia Tech}
+\maketitle
+\tableofcontents
+\newpage
+\begin{itemize}
+\item Decision Trees are a non-parametric supervised learning method for classification and regression. 
+\item It predicts a target variable by learning simple decision rules inferred from the data features. 
+\item Cons: simple and easy to interpret 
+\item Pros: can be noisy and overfit to data 
+\end{itemize}
+\section{CART: Classification And Regression Tree (Breiman et al. 1984)}
+\begin{itemize}
+\item Partition the feature space into a set of rectangles 
+\item Decision rule can be represented by a tree (binary tree most common)
+\item Regression tree: Fit a simple model (e.g., a constant) for each rectangle
+\item Classification tree: Majority vote for samples in the rectangle
+\end{itemize}
+
+\section{Regression Tree}
+\begin{itemize}
+\item Restrict attention to recursive binary partitions 
+\item First split the space into two regions and model the response by the mean of $Y$ in each region.
+\item Choose the variable and split-point to achieve the best fit
+\item Then one or both of these regions are split into two more regions
+\item This process is continued until some stopping rule is applied 
+\item Steps:
+\begin{itemize}
+\item Greedy approach: constructing decision trees "top-down"
+\item Start with all the samples
+\item Choose a variable at each step that best split the region by trying all the possible options and choose the one that reduces the error the most.
+\begin{itemize}
+\item Splitting a variable $j$
+\item Splitting position $s$
+\item Define half-spaces: $$R_1(j,s) = \{X | X_j \leq s\} \text{ and } R_2(j,s) = \{X | X_j > s\}$$
+Solve the problem for optimal splitting and "regression":
+$$\min_{j,s}[\min_{c_1} \sum_{x_i \in R_1(j,s)} (y_i - c_1)^2 +\min_{c_2} \sum_{x_i \in R_2(j,s)} (y_i - c_2)^2 ].$$
+Once $j,s$ are decided, optimal prediction is simple 
+$$\hat{c}_1 = ave(y_i|x_i \in R_1(j,x)), \hat{c}_2 = ave(y_i|x_i \in R_2(j,x)).$$
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{Tree pruning}
+\begin{itemize}
+\item How large should a tree be?\\
+Large tree may overfit data; Small tree underfits and dose not not capture important structure. 
+\item Determining tree depth by controlling the data-fit complexity tradeoff:\\
+Grow a large tree, stop when a minimum node size has reached, then performing pruning by minimizing the cost function
+$$C_{\alpha}(S) = \sum_{j=1}^{|J|} \sum_{x_i\in R_j} (x_i - \hat{c}_j)^2 + \alpha |J|$$
+where 
+\begin{itemize}
+\item the first term measures data-fitting and the second term controls the complexity of the model
+\item $\sum_{x_i\in R_j} (x_i - \hat{c}_j)^2$ is the data fitting error for the $j$th node 
+\item $J$ is the set of terminal nodes in the decision tree, or the regions in the feature space
+\item $\alpha > 0$ is the regularization parameter, it can be decided using cross-validation 
+\end{itemize}
+\end{itemize}
+\section{Classification Tree}
+\begin{itemize}
+\item Classification outcome takes values $1,2,...,K$
+\item Need different criterion for splitting node and pruning tree
+\item $$\hat{p}_{jk} = \frac 1 {N_j} \sum_{x_i \in R_j} \mathbb{I}(y_i = k)$$
+$$k(j) = \text{argmax}_k \hat{p}_{jk}$$
+where $k(j)$ is the result of the majority voted class and $N_j$ is the number of samples in region $R_j$.
+\item Tree pruning
+$$C_{\alpha}(J) = \sum_{j=1}^{|J|} N_j Q_j(J) + \alpha |J|,$$
+where $N_j Q_j(J)$ measures the error for the j-th node. 
+\end{itemize}
+
+\subsection{Different measures of errors $Q_j(J)$}
+\begin{itemize}
+\item Misclassification error:
+$$\frac{1}{N_j} \sum_{x_i \in R_j}\mathbb{I}(y_i \neq k(j))= 1 - \hat{p}_{jk}.$$
+\item Gini index: 
+$$\sum_{k=1}^K \sum_{k'=1,\\k'\neq k}^K \hat{p}_{jk}\hat{p}_{jk'} = \sum_{k=1}^K\hat{p}_{jk}(1-\hat{p}_{jk})$$
+\item Cross-entropy
+$$-\sum_{k=1}^K \hat{p}_{jk}\log \hat{p}_{jk}$$
+* These measures measure the purity of the region. \\
+* For example, if a region only contains one class of samples, the Gini index in that region will be 0. \\
+* However, if a region contains more than two classes of samples and they have equal number of samples, then the Gini index will be large. \\
+* Gini index and Cross-entropy are differentiable measures of errors, which is good for training the model using Gradient Descent or Stochastic Gradient Descent. 
+\end{itemize}
+
+\section{Pros and Cons of decision tree}
+\begin{itemize}
+\item Trees (if grown large enough) can capture complex structures
+\item A main issue of the tree-based method is noisy outcome
+\item They benefit from averaging
+\end{itemize}
+
+\section{\textbf{Random forest} for regression and for classification}
+\begin{itemize}
+\item \textbf{Bootstrap} samples from training data
+\item Grow a tree for each batch of bootstrap samples
+\item Regression: average tree's predictions
+\item Classification: take majority vote across trees
+\end{itemize}
+
+Random forest is basically a bagging approach, another way of combining weak learners. (We also talked about Boosting)
+\section{Bagging}
+\begin{itemize}
+\item Run weak learners on bootstrap replicates of the training set
+\item Average weak leaners 
+\item Reduce variance
+\end{itemize}
+
+Random forest is basically a bagging approach, another way of combining weak learners. Here the weak learners are decision trees. We can also use decision tree to do boosting. 
+
+\section{Bootstrap}
+\begin{itemize}
+\item Idea: Bootstrapping learns about the sample characteristics by taking resamples and use the information to infer the characteristics of the population. 
+\item Retake samples with replacement from the original samples, i.e. taking samples from empirical distribution 
+\item Provides a powerful tool to calculate the standard error of an estimator, construct confidence intervals, and many other uses. 
+\item Example: Estimate variance of estimator 
+\begin{itemize}
+\item We would like to decide the variance of an estimator $\hat{\theta}$
+\item Use data to generate $B$ batches of new samples and evaluate $\hat{\theta}$ for each resampled batch
+$$Var(\hat{\theta}) \approx \frac{1}{B-1}\sum_{i=1}^B (\hat{\theta_i} - \bar{\theta})^2$$
+\end{itemize}
+\end{itemize}
+
+\section{Random forest}
+\begin{itemize}
+\item For $b=1,...,B$
+\item Draw bootstrap sample $Z_b$ of size $N$ from training data
+\item Grow a \textbf{random forest tree} $T_b$ for the bootstrapped data by 
+\begin{itemize}
+\item Select $v$ variables at random from $p$ variables 
+\item Pick the best variable/split among the $v$ 
+\item Split the node into two children nodes \\
+\end{itemize}
+Outcome ensemble of trees $T_b$, $b = 1, ..., B$.
+\item To make predictions for a new point $x$
+\begin{itemize}
+\item Regression: take average $\frac 1 B \sum_{b = 1}^B T_b(x)$
+\item Classification: majority vote of $\{T_b(x)\}$, $b = 1, ..., B.$
+\end{itemize}
+\noindent Considerations 
+\item \textbf{Difference between bagging and Random forest}: in Random forests, only a subset of features are selected at random out of the total and the best split feature from the subset is used to split each node in a tree, unlike in bagging where all features are considered for splitting a node.
+
+\item Effect of averaging: 
+\begin{itemize}
+\item Average of $B$ i.i.d. random variables, each with variance $\sigma^2$, has variance $\sigma^2/B$.
+\item If the variables are dependent with positive correlation $\rho$, the variance of the average is $\rho \sigma^2 + \frac{1-\rho}{B}\sigma^2$. (This is the case for random forest since the decision trees are not i.i.d, they are dependent with each other as the resample batches can be very similar.)
+\end{itemize}
+\item The amount of correlation between pairs of bagged tree limit the benefit of averaging 
+\item Before each split, select $v \leq p$ of the input variables at random as candidates of splitting.
+\begin{itemize}
+\item For classification, $v \approx floor(\sqrt{p})$
+\item For regression, the default value $v \approx floor(p/3)$
+\end{itemize}
+\end{itemize}
+
+How to decide the number of trees in a random forest model? 
+\section{OOB error}
+\begin{itemize}
+\item Out-of-bag (OOB) samples:\\
+For each observation $z^i = (x^i, y^i)$, construct its random forest predictor be averaging only those trees corresponding to bootstrap samples in which $z^i$ dose not appear.
+
+\item OOB error estimate is almost identical to that obtained by $N-fold$ cross validation
+\item Help to decide the number of trees: once OOB error stabilizes, the training can be terminated
+\end{itemize}
+
+\section{Boosting trees}
+\begin{itemize}
+\item A tree can be represented as (parameter $\Theta = \{R_j, \gamma_j\}_{j=1}^J$)
+$$T(x, \Theta) = \sum_{j=1}^J \gamma_j \mathbb{I}( x\in R_j),$$
+where each region has a weight $\gamma_j$. 
+\item Minimize the cost function $$\hat{\Theta} = \text{argmin}_{\Theta} \sum_{j=1}^J \sum_{x_i \in R_j} L(y^i, \gamma_j)$$
+where $L$ is the cost function which can be misclassification rate, Gini index, or cross entropy. 
+
+\end{itemize}
+
+\section{Forward stagewise optimization for boosting trees}
+\begin{itemize}
+\item Solve a sequence of optimization problems
+$$\hat{\Theta}_t = \text{argmin}_{\Theta_t} \sum_{i=1}^m L(y^i, f_{t-1}(x^i) + T(x^i; \Theta_t))$$
+\item Alternating minimization: finding $\gamma(j)$ given $R_j$, and then find $R_j$
+\item For instance, if we have exponential loss like adaboost
+$$\hat{\gamma}_t(j) = \frac 1 2 \log \frac{\sum_{x^i \in R_{jt} }D_t(i) \mathbb{I}(y^i = 1)}{\sum_{x^i \in R_{jt} }D_t(i) \mathbb{I}(y^i = -1)}.$$
+\end{itemize}
+The boosted models outperforms random forests when the number of trees grows further as it constructs new trees based on mistakes the previous trees made. 
+%\section{}
+%\begin{itemize}
+%\item 
+%\end{itemize}
+\end{document}
