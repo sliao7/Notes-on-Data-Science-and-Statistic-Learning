@@ -11,3 +11,4 @@
 \contentsline {section}{\numberline {10}OOB error}{7}{section.10}
 \contentsline {section}{\numberline {11}Boosting trees}{7}{section.11}
 \contentsline {section}{\numberline {12}Forward stagewise optimization for boosting trees}{7}{section.12}
+\contentsline {section}{\numberline {13}Three tuning parameters of Boosting}{8}{section.13}

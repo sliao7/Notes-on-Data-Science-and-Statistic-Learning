@@ -189,9 +189,14 @@ $$\hat{\Theta}_t = \text{argmin}_{\Theta_t} \sum_{i=1}^m L(y^i, f_{t-1}(x^i) + T
 \item For instance, if we have exponential loss like adaboost
 $$\hat{\gamma}_t(j) = \frac 1 2 \log \frac{\sum_{x^i \in R_{jt} }D_t(i) \mathbb{I}(y^i = 1)}{\sum_{x^i \in R_{jt} }D_t(i) \mathbb{I}(y^i = -1)}.$$
 \end{itemize}
-The boosted models outperforms random forests when the number of trees grows further as it constructs new trees based on mistakes the previous trees made. 
-%\section{}
-%\begin{itemize}
-%\item 
-%\end{itemize}
+The following notes are from Chapter 8.2 of the book \textit{An Introduction to Statistical Learning} by Gareth J, Daniela W, Trevor H, Robert T. \\
+
+\textbf{Idea of Boosting Regression Trees}: The boosting approach learns slowly. Given the current model, we fit a decision tree to the residuals from the model. That is, we fit a tree using the current residuals, rather than the outcome $Y$, as the response. We then add this new decision tree into the fitted function in order to update the residuals. Each of these trees can be rather small, with just a few terminal nodes. By fitting small trees to the residuals, we slowly improve $\hat{f}$ in areas where it dose not perform well. The shrinkage parameter $\lambda$ slows the process down even further, allowing more and different shaped trees to attack the residuals. In general, statistical learning approaches that learn slowly tend to perform well. Note that in boosting, unlike in bagging, the construction of each tree depends strongly on the trees that have been grown. (Boosting classification trees proceeds in a similar but slightly more complex way. )
+\section{Three tuning parameters of Boosting}
+\begin{itemize}
+\item[1] The number of trees $B$. Boosting can overfit if $B$ is too large. We use cross-validation to select $B$.
+\item[2] The shrinkage parameter $\lambda$, a small positive number. This controls the rate at which boosting learns. Typical values are 0.01 or 0.001, and the right choice can depend on the problem. Very small $\lambda$ can require using a very large value of $B$ in order to achieve good performance. 
+\item[3] The number $d$ of splits in each tree (number of terminal nodes: $d + 1$). $d$ controls the complexity of the boosted ensemble. Often $d=1$ works well, in which case each tree is a stump, consisting of a simple split. In this case, the boosted ensemble is fitting an additive model, since each term involves only a single variable. More generally $d$ is the interaction depth, and controls the interaction order of the boosted model, since $d$ splits can involve at most $d$ variables. 
+\end{itemize}
+\textbf{Difference between boosting and random forest}: in boosting, because the growth of a particular tree takes into account the other trees that have already been grown, smaller trees are typically sufficient. Using smaller trees can aid in interpretability as well; for instance, using stumps (d = 1) leads to an additive model.
 \end{document}
