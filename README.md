@@ -27,6 +27,11 @@ This repository is to backup my learning notes.
 ### **Boosting** [notes](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/Boosting/Boosting.pdf) [slides](https://github.com/sliao7/CSE6740_Computational_Data_Analysis/blob/main/slides/boosting.pdf)
 * AdaBoosting classifier: algorithms, exponetial loss, parameter updates 
 
+### **Decision Tree and Random Forest** [notes](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/Decision%20Tree%20and%20Random%20Forest/Decision%20Tree%20and%20Random%20Forest.pdf) [slides]()
+* Decision Tree growing and pruning, Error Measures (misclassification errer, Gini index, Cross-entropy)
+* Random Forest, Bagging, Bootstrap, OOB (out-of-bag) error 
+* Boosting trees
+
 ## Linear Algebra
 * Possible case of a linear system [pdf](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Latex/Linear%20Equation%20Systems/Linear%20Equation%20Systems.pdf)
 
