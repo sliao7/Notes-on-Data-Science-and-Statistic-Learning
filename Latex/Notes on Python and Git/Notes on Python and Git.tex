@@ -3,7 +3,7 @@
 \usepackage{algorithm,hyperref}
 \usepackage{algorithmic}
 \usepackage{graphicx}
-\usepackage{tcolorbox}
+\usepackage[many]{tcolorbox}
 \usepackage{hyperref}
 \usepackage{listings}
 \lstset
@@ -60,7 +60,7 @@ There are a lot of common commands in Python and Git that I need to use very oft
 \end{python}
 
 \end{lstlisting}
-
+% table
 \item insert table \\
 \begin{lstlisting}
 \begin{center}
@@ -97,6 +97,44 @@ Non-spam & play secret sports today & [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
  \hline
 \end{tabular}
 \end{center}
+% Algorithm
+\item Algorithm inside box
+\begin{lstlisting}
+\begin{tcolorbox}[breakable,enhanced]
+\textbf{Solution:}
+  \begin{algorithm}[H]
+  \begin{algorithmic}
+     \FOR{ $\lambda = \lambda_1$ to $\lambda_n$ }
+    \STATE statement 0
+     \FOR{$k = 1$ to $K$}
+                 \STATE statement 1
+                 \STATE statement 2                
+                 \ENDFOR
+    \STATE statement3  
+    \ENDFOR
+    \STATE statement 4
+    \end{algorithmic}
+    \caption{Algorithm name}
+  \end{algorithm}
+\end{tcolorbox}
+\end{lstlisting}
 
+\begin{tcolorbox}[breakable,enhanced]
+\textbf{Solution:}
+  \begin{algorithm}[H]
+  \begin{algorithmic}
+     \FOR{ $\lambda = \lambda_1$ to $\lambda_n$ }
+    \STATE statement 0
+     \FOR{$k = 1$ to $K$}
+                 \STATE statement 1
+                 \STATE statement 2                
+                 \ENDFOR
+    \STATE statement3  
+    \ENDFOR
+    \STATE statement 4
+    \end{algorithmic}
+    \caption{Algorithm name}
+  \end{algorithm}
+\end{tcolorbox}
 \end{itemize}
 \end{document}

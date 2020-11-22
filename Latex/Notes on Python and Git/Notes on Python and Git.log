@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  3 NOV 2020 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  22 NOV 2020 00:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -540,26 +540,278 @@ Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box44
 \tcb@out=\write4
 \tcb@record@out=\write5
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.13'
+\c@tcbrastercolumn=\count130
+\c@tcbrasterrow=\count131
+\c@tcbraster=\count132
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.13'
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen155
+\pgffor@skip=\dimen156
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count133
+\pgfplotmarksize=\dimen157
 )
+\tikz@lastx=\dimen158
+\tikz@lasty=\dimen159
+\tikz@lastxsaved=\dimen160
+\tikz@lastysaved=\dimen161
+\tikzleveldistance=\dimen162
+\tikzsiblingdistance=\dimen163
+\tikz@figbox=\box45
+\tikz@figbox@bg=\box46
+\tikz@tempbox=\box47
+\tikz@tempbox@bg=\box48
+\tikztreelevel=\count134
+\tikznumberofchildren=\count135
+\tikznumberofcurrentchild=\count136
+\tikz@fig@count=\count137
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count138
+\pgfmatrixcurrentcolumn=\count139
+\pgf@matrix@numberofcolumns=\count140
+)
+\tikz@expandcount=\count141
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+\tcb@waterbox=\box49
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.13'
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.13'
+\tcb@testbox=\box50
+\tcb@totalupperbox=\box51
+\tcb@totallowerbox=\box52
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.13'
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.13'
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.13'
+\tcbfitdim=\dimen164
+\tcb@lowerfitdim=\dimen165
+\tcb@upperfitdim=\dimen166
+\tcb@cur@hbadness=\count142
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.13'
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/03/05 L3 programming layer (loader) 
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/03/05 L3 programming layer (code)
+\c_max_int=\count143
+\l_tmpa_int=\count144
+\l_tmpb_int=\count145
+\g_tmpa_int=\count146
+\g_tmpb_int=\count147
+\g__intarray_font_int=\count148
+\g__prg_map_int=\count149
+\c_log_iow=\count150
+\l_iow_line_count_int=\count151
+\l__iow_line_target_int=\count152
+\l__iow_one_indent_int=\count153
+\l__iow_indent_int=\count154
+\c_zero_dim=\dimen167
+\c_max_dim=\dimen168
+\l_tmpa_dim=\dimen169
+\l_tmpb_dim=\dimen170
+\g_tmpa_dim=\dimen171
+\g_tmpb_dim=\dimen172
+\c_zero_skip=\skip53
+\c_max_skip=\skip54
+\l_tmpa_skip=\skip55
+\l_tmpb_skip=\skip56
+\g_tmpa_skip=\skip57
+\g_tmpb_skip=\skip58
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count155
+\c__fp_leading_shift_int=\count156
+\c__fp_middle_shift_int=\count157
+\c__fp_trailing_shift_int=\count158
+\c__fp_big_leading_shift_int=\count159
+\c__fp_big_middle_shift_int=\count160
+\c__fp_big_trailing_shift_int=\count161
+\c__fp_Bigg_leading_shift_int=\count162
+\c__fp_Bigg_middle_shift_int=\count163
+\c__fp_Bigg_trailing_shift_int=\count164
+\c__fp_rand_size_int=\count165
+\c__fp_rand_four_int=\count166
+\c__fp_rand_eight_int=\count167
+\l__sort_length_int=\count168
+\l__sort_min_int=\count169
+\l__sort_top_int=\count170
+\l__sort_max_int=\count171
+\l__sort_true_max_int=\count172
+\l__sort_block_int=\count173
+\l__sort_begin_int=\count174
+\l__sort_end_int=\count175
+\l__sort_A_int=\count176
+\l__sort_B_int=\count177
+\l__sort_C_int=\count178
+\l__tl_build_start_index_int=\count179
+\l__tl_build_index_int=\count180
+\l__tl_analysis_normal_int=\count181
+\l__tl_analysis_index_int=\count182
+\l__tl_analysis_nesting_int=\count183
+\l__tl_analysis_type_int=\count184
+\l__regex_internal_a_int=\count185
+\l__regex_internal_b_int=\count186
+\l__regex_internal_c_int=\count187
+\l__regex_balance_int=\count188
+\l__regex_group_level_int=\count189
+\l__regex_mode_int=\count190
+\c__regex_cs_in_class_mode_int=\count191
+\c__regex_cs_mode_int=\count192
+\l__regex_catcodes_int=\count193
+\l__regex_default_catcodes_int=\count194
+\c__regex_catcode_D_int=\count195
+\c__regex_catcode_S_int=\count196
+\c__regex_catcode_L_int=\count197
+\c__regex_catcode_O_int=\count198
+\c__regex_catcode_A_int=\count199
+\c__regex_all_catcodes_int=\count266
+\l__regex_show_lines_int=\count267
+\l__regex_min_state_int=\count268
+\l__regex_max_state_int=\count269
+\l__regex_left_state_int=\count270
+\l__regex_right_state_int=\count271
+\l__regex_capturing_group_int=\count272
+\l__regex_min_pos_int=\count273
+\l__regex_max_pos_int=\count274
+\l__regex_curr_pos_int=\count275
+\l__regex_start_pos_int=\count276
+\l__regex_success_pos_int=\count277
+\l__regex_curr_char_int=\count278
+\l__regex_curr_catcode_int=\count279
+\l__regex_last_char_int=\count280
+\l__regex_case_changed_char_int=\count281
+\l__regex_curr_state_int=\count282
+\l__regex_step_int=\count283
+\l__regex_min_active_int=\count284
+\l__regex_max_active_int=\count285
+\l__regex_replacement_csnames_int=\count286
+\l__regex_match_count_int=\count287
+\l__regex_min_submatch_int=\count288
+\l__regex_submatch_int=\count289
+\l__regex_zeroth_submatch_int=\count290
+\g__regex_trace_regex_int=\count291
+\c_empty_box=\box53
+\l_tmpa_box=\box54
+\l_tmpb_box=\box55
+\g_tmpa_box=\box56
+\g_tmpb_box=\box57
+\l__box_top_dim=\dimen173
+\l__box_bottom_dim=\dimen174
+\l__box_left_dim=\dimen175
+\l__box_right_dim=\dimen176
+\l__box_top_new_dim=\dimen177
+\l__box_bottom_new_dim=\dimen178
+\l__box_left_new_dim=\dimen179
+\l__box_right_new_dim=\dimen180
+\l__box_internal_box=\box58
+\l__coffin_internal_box=\box59
+\l__coffin_internal_dim=\dimen181
+\l__coffin_offset_x_dim=\dimen182
+\l__coffin_offset_y_dim=\dimen183
+\l__coffin_x_dim=\dimen184
+\l__coffin_y_dim=\dimen185
+\l__coffin_x_prime_dim=\dimen186
+\l__coffin_y_prime_dim=\dimen187
+\c_empty_coffin=\box60
+\l__coffin_aligned_coffin=\box61
+\l__coffin_aligned_internal_coffin=\box62
+\l_tmpa_coffin=\box63
+\l_tmpb_coffin=\box64
+\l__coffin_display_coffin=\box65
+\l__coffin_display_coord_coffin=\box66
+\l__coffin_display_pole_coffin=\box67
+\l__coffin_display_offset_dim=\dimen188
+\l__coffin_display_x_dim=\dimen189
+\l__coffin_display_y_dim=\dimen190
+\l__coffin_bounding_shift_dim=\dimen191
+\l__coffin_left_corner_dim=\dimen192
+\l__coffin_right_corner_dim=\dimen193
+\l__coffin_bottom_corner_dim=\dimen194
+\l__coffin_top_corner_dim=\dimen195
+\l__coffin_scaled_total_height_dim=\dimen196
+\l__coffin_scaled_width_dim=\dimen197
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count292
+))
+Package: xparse 2018/02/21 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count293
+\g__xparse_grabber_int=\count294
+\l__xparse_m_args_int=\count295
+\l__xparse_mandatory_args_int=\count296
+\l__xparse_v_nesting_int=\count297
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tcboxverb with sig. ' O{} v ' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tcbsidebyside with sig. ' +O{} +m +m ' on line 280.
+.................................................
+))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count130
-\lst@gtempboxa=\box45
-\lst@token=\toks41
-\lst@length=\count131
-\lst@currlwidth=\dimen155
-\lst@column=\count132
-\lst@pos=\count133
-\lst@lostspace=\dimen156
-\lst@width=\dimen157
-\lst@newlines=\count134
-\lst@lineno=\count135
-\lst@maxwidth=\dimen158
+\lst@mode=\count298
+\lst@gtempboxa=\box68
+\lst@token=\toks43
+\lst@length=\count299
+\lst@currlwidth=\dimen198
+\lst@column=\count300
+\lst@pos=\count301
+\lst@lostspace=\dimen199
+\lst@width=\dimen256
+\lst@newlines=\count302
+\lst@lineno=\count303
+\lst@maxwidth=\dimen257
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count136
-\lst@skipnumbers=\count137
-\lst@framebox=\box46
+\c@lstnumber=\count304
+\lst@skipnumbers=\count305
+\lst@framebox=\box69
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -613,7 +865,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-\AtBeginShipoutBox=\box47
+\AtBeginShipoutBox=\box70
 Package hyperref Info: Link coloring OFF on input line 18.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -622,7 +874,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count138
+\c@section@level=\count306
 )
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
@@ -635,17 +887,17 @@ LaTeX Info: Redefining \nameref on input line 18.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen159
-\scratchbox=\box48
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen160
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count307
+\scratchdimen=\dimen258
+\scratchbox=\box71
+\nofMPsegments=\count308
+\nofMParguments=\count309
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count310
+\MPscratchDim=\dimen259
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -664,7 +916,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count145
+\c@lstlisting=\count313
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -704,35 +956,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 136.
+[2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./Notes on Python and Git.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `"Notes on Python and Git".out' has not chang
 ed.
 (rerunfilecheck)             Checksum: ED1947747DA370F14776B895AA96C5A1;171.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 18444 strings out of 492649
- 328726 string characters out of 6129622
- 521942 words of memory out of 5000000
- 21993 multiletter control sequences out of 15000+600000
- 12433 words of font info for 49 fonts, out of 8000000 for 9000
+ 31133 strings out of 492649
+ 618163 string characters out of 6129622
+ 842627 words of memory out of 5000000
+ 34574 multiletter control sequences out of 15000+600000
+ 539372 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,6n,73p,965b,2289s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,7n,93p,10505b,2285s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "Notes on Python and Git.pdf" (2 pages, 62447 bytes).
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on "Notes on Python and Git.pdf" (3 pages, 91218 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 39 named destinations out of 1000 (max. 500000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 68 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
