@@ -1,6 +1,8 @@
-# [Note on Machine Learning Andrew Ng Coursera](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/tree/main/Machine%20Learning%20Notes%20Adrew%20Ng%20Coursera%20)
+# 1, [Good Articles](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/blob/main/Articles.md)
 
-# Notes-on-Data-Science-and-Statistic-Learning
+# 2, [Note on Machine Learning Andrew Ng Coursera](https://github.com/sliao7/Notes-on-Data-Science-and-Statistic-Learning/tree/main/Machine%20Learning%20Notes%20Adrew%20Ng%20Coursera%20)
+
+# 3, Notes-on-Data-Science-and-Statistic-Learning
 
 This repository is to backup my learning notes.
 ## Statistics 
