@@ -4,3 +4,5 @@ I am collecting good articles I read.
 
 * A concise summary of each algorithm and point out some of the key features;
 * Start with some of the more fundamental algorithms and then dive into some newer algorithms like CatBoost, Gradient Boost, and XGBoost.
+
+##### [2, A Summary of Udacity A/B Testing Course](https://towardsdatascience.com/a-summary-of-udacity-a-b-testing-course-9ecc32dedbb1)
