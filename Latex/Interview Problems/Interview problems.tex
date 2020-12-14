@@ -1,0 +1,89 @@
+\documentclass[twoside,12pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,fullpage,amssymb}
+\usepackage{algorithm,hyperref}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage{pythonhighlight}
+
+
+\begin{document}
+\title{A collection of my interview problems}
+\author {Shasha Liao}
+\maketitle
+\section{CTC quant researcher}
+Dec 9, 2020 first technical interview
+\begin{enumerate}
+\item Discuss my research project
+\item We want to make change for $S$ cents, and we have infinite supply of each coin in the set Coins = $\{v_0, v_1, ..., v_n\}$, where $v_i$ is the value of the $i-$th coin. Find the number of methods to reach value $S$?
+\begin{tcolorbox}[breakable, enhanced]
+We can start by drawing a decision tree for simple cases. Then we need to design a dynamic programming algorithm. \\
+Suppose there are $z(S,n)$ methods to reach value $S$ use the $n$ coins.\\
+
+Subproblem: find $z(T,i)$, the number of methods to reach value $T < S$ use the first $i$ coins. Considering the two options, use the $i$-th coin or not, we have the recurrence relation: 
+
+$$z(T,i) = z(T-v_i, i) + z(T, i-1).$$ 
+
+%\begin{algorithm}[H]
+%\begin{algorithmic}
+%\IF{$T < 0$}
+%\STATE return 0 \COMMENT{base case when $S < 0$}
+%\ENDIF
+%\IF{$T = 0$}
+%\STATE return 0 \COMMENT{base case when $S= 0$}
+%\ENDIF
+%\IF{$i < 0$}
+%\STATE return 0 \COMMENT{base case when $S= 0$}
+%\ENDIF
+%\FOR{$i = 1$ to $n$}
+%\FOR{$T = 1$ to $S$}
+%\STATE $z(T, i) = 0$ \COMMENT{initialization}
+%\FOR{$k = 0$ to $\lfloor \frac T {v_i} \rfloor$}
+%\STATE $z(T, i) \leftarrow z(T, i) +  z(T - k v_i, i-1) $ \COMMENT{from the recurrence relation above}
+%\ENDFOR
+%\ENDFOR
+%\ENDFOR 
+%\end{algorithmic}
+%\end{algorithm}
+
+\begin{python}
+class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        
+        memo = {}
+        def helper(amount, i):
+            
+            if amount < 0:
+                return 0
+            if amount == 0:
+                return 1
+            if i < 0:
+                return 0
+            
+            if (amount, i) not in memo:
+                
+                ans = helper(amount - coins[i], i) + helper(amount, i-1)
+                memo[(amount,i)] = ans
+            
+            return memo[(amount,i)]
+
+        return helper(amount,len(coins)-1)
+\end{python}
+
+\end{tcolorbox}
+
+\item You can take two trains, train A or train B, to go to work. The waiting time of train A follows a uniform distribution between 0 and 5, and the waiting time of train B follows a uniform distribution between 0 and 10. What is your expected waiting time to take a train to work? 
+\begin{tcolorbox}[breakable, enhanced]
+$X_1 \sim U(0,5)$, $X_2 \sim U(0,10)$. My waiting time $X = \min(X_1, X_2)$. \\
+\begin{align*}
+E[X] &= \int_0^{10} \int_0^5 \min(x_1, x_2) \frac 1 {50} dx_1 dx_2 \\
+& = \frac 1 {50} \int_0^{10} \int_0^5 \min(x_1, x_2) dx_1 dx_2 \\
+& = \frac 1 {50} \left(\int_0^{5} \int_0^{x_1} x_2 dx_2 dx_1 + \int_0^{5} \int_{x_1}^{10} x_1 dx_2 dx_1 \right) \\
+& = ...
+\end{align*}
+\end{tcolorbox}
+\end{enumerate}
+
+
+\end{document}
