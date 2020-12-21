@@ -1,0 +1,191 @@
+\documentclass[twoside,12pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,fullpage,amssymb}
+\usepackage{algorithm,hyperref}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Notes on Statistics}
+\author {Shasha Liao \\ Georgia Tech}
+\maketitle
+Notes from Youtube Channel \textit{StatQuest with Josh Starmer}
+\section{Explaining Concepts}
+\begin{itemize}
+\item Population Variance: the average of the squared differences between the data and the population mean $\mu$.
+\item Model: an approximation of the real data. We use models to explore relationships and we use statistics to determine how useful and how reliable our model is.
+\item Sampling a Distribution: use computer to pick a random number based on the probability described by the histogram or the curve. We do this to explore statistics. 
+\item Hypothesis Testing: We create a hypothesis. If data give us strong evidence that the hypothesis is wrong, then we can reject the hypothesis. But if we have data that is similar to the hypothesis, but not exactly the same, then the best thing we can do is fail to reject the hypothesis.
+\begin{itemize}
+\item Null hypothesis: the hypothesis that there is no difference between things (requires no preliminary data to make the statement).
+\item Alternative hypothesis: the opposite of the null hypothesis when there are only two groups. If there are more than two groups, we will have several options for alternative hypothesis and using different alternative hypothesis may end up with different decisions about rejecting the null hypothesis or not. 
+\end{itemize}
+\item p-values: the probability of observing the given data given the null hypothesis is true. It takes values between 0 and 1, quantifying how confident we should be that the null hypothesis is true. \\
+- If we have a small p-value (less than a significance level $\alpha$), we can reject the null hypothesis. But a small p-value dose not mean that the difference between two things in the null hypothesis is large. It only tells us the probability of the observing the current data given the null hypothesis is true and helps us to decide whether we want to reject the null hypothesis or not.
+\item Type I and Type II error\\
+- Type I error: when the null hypothesis is true, but we rejected it. It corresponds to obtaining a false positive. \\
+- Type II error: when the null hypothesis is false, but we failed to reject it. It corresponds to having a false negative. \\
+\item Significance level $\alpha$\\ 
+- Typically we choose $\alpha = 5\%$.\\
+- It means we are wiling to get a false positive conclusion 5 times out of 100. \\
+- Lowering the $\alpha$ value (say to $1\%$) will decrease the probability of making a false positive conclusion(type I error).
+\end{itemize}
+
+\section{Notes from the course Descriptive Statistics in Udacity}
+
+ \subsection{Lesson 1: Intro to Research Methods}
+\begin{itemize}
+\item construct: (e.g. effort, health, happiness...) there are many ways to define a construct 
+\item operational definition: a way of turning constructs into variables we can measure
+\item lurking variables: can influence the relationships we measure between variables and should be controlled in an experiment 
+\item population, population mean $\mu$
+\item sample, sample mean $\bar{x}$, sampling error
+\item we estimate population parameters using sample statistics 
+\item Show relationships/correlation $\Rightarrow$ Observational studies \& Surveys
+\item Show causation $\Rightarrow$ Controlled experiment
+\item Survey: Cheap and easy, but might get untruthful responses, biased responses, respondents not understanding the questions (response bias), or respondent refusing to answer (nonresponse bias). Usually used to analyze constructs. 
+\item Controlled experiment: blinding(participants), double blinding experiment(both participant and researchers), random assignment(equal chance and independent, represent the population better)
+\end{itemize}
+
+\subsection{Lesson 4: Visualizing Data}
+\begin{itemize}
+\item Frequency table, Relative Frequency(proportion, percentage), Interval/bin
+\item Histogram(bins/frequencies): x-axis is qualitative, adjust bin size(length of intervals) based on how much details you want
+\item Bar graph: x-axis is categorical, no bin size
+\item Biased graphs: need to check the values of the y-axis
+\item Histogram of Normal distribution: roughly symmetric, most data fall in the middle of the distribution
+\item Skewed Distribution: asymmetrical, skewed with the most data falling toward the left or right of the distribution 
+\end{itemize}
+
+\subsection{Lesson 8: Central Tendency}
+\begin{itemize}
+\item Mode: the most common value in the distribution; for histogram, the mode is the range of the highest frequency; uniform distribution has no mode; multi-mode distribution; 
+\item Median: sort the data; the median is the value in the middle; median is not influenced by outliers; median is more robust; 
+\item Mean/Average: the mean can be described as a formula; all scores in the distribution affect the mean; many samples from the same population will have similar means; the mean of a sample can be used to make inferences about the population it came from; the mean will change if we add an extreme value to the dataset; outliers lead to a misleading average; 
+\item Mode, Median, Mean are the three measures of center of the data; Median is better for skewed data;
+\item Mean
+\begin{itemize}
+\item Best used as a measure of center if our data is approximately symmetric and dose not contain outliers 
+\item There is a simple formula to compute mean
+\item The mean is very sensitive to outliers. It will always get pulled in the direction of the largest outliers. 
+\end{itemize}
+\item Median
+\begin{itemize}
+\item Best used as a measure of center when outliers are presented in the data since median will not be affected by extremely small or large observations
+\item The median is the data point where 50\% of the observations are above and below that datapoint. To find the median, we first sort the dataset and consider cases when the dataset has an odd or even number of observations; if odd, then the median is the number in the middle; if even, then the median is the average of the two numbers in the middle.
+\end{itemize}
+\item Mode
+\begin{itemize}
+\item Best used as a measure of center when analyzing categorical datasets. The mode is the number, range of numbers, or category that occurs the most frequently
+\item The mode is also very resistant to outliers since it relies on which observation occurs the most and not the actual value of the observation
+\end{itemize}
+\end{itemize}
+
+\subsection{Lesson 11: Variability}
+\begin{itemize}
+\item Two distributions can have the same mean, median, and mode, but have different variances which measure how spread out a distribution is. 
+\item We don't use range as a measure of the variability of our data because it is not robust enough. If we add an outlier, the range can be changed a lot. 
+\item 
+\begin{itemize}
+\item $Q_1$: the first quartile 
+\item $Q_2$: median
+\item $Q_3$: the third quartile
+\item Interquartile Range(IQR): $Q_3$ - $Q_1$
+\end{itemize}
+\item Def: a data $x$ is considered an outlier if $x < Q_1 - 1.5 (IQR)$ or $x > Q_3 + 1.5 (IQR)$.
+\item Boxplots: Min, $Q_1$, $Q_2$, $Q_3$, max, and outliers. The length of the box in the middle reflects how spread the data set is. 
+\item IQR dose not depend on every data.
+\item Variance: a number that takes account of all the data to measure the variability of the dataset. It is calculated as the average/mean squared deviation. 
+\item Standard Deviation: 
+\begin{itemize}
+\item The most common measure of spread. 
+\item Calculated as the square root of the variance to make the unit 1D.  
+\item For normal distributions, 68\% of data falls within 1 standard deviation of the mean; 95\% of data falls within 2 standard deviations of the mean.
+\end{itemize}
+\item Bessel's correction: In general, samples underestimate the amount of variability in a population because samples tend to be values in the middle of the population. Instead of dividing the sum of squared deviations by $n$, we divide it by $n-1$ to calculate the sample standard deviation to approximate the bigger population standard deviation. 
+\end{itemize}
+
+\subsection{Lesson 13: Standardizing}
+\begin{itemize}
+\item The proportion of data values that are less than or greater than a certain value in the data set tells us how good or how bad something is. 
+\item Absolute frequency and relative frequency (absolute frequency divided by $n$)
+\item The distribution curve allows us to calculate the proportion of data points between any two values on the x-axis. 
+\item In a normal distribution, given a value in the $x$ axis, we can calculate $z = $ the number of standard deviation that value is away from the mean. Then we can estimate the percent of data less than or greater than that value. 
+\item Describe a value: 3.5 deviations below/above the mean. 
+\item $z$ score = $\frac{x - \mu}{\sigma}$ is the number of standard deviation any value is away from the mean. \item Converting every value to a $z$ score in a normal distribution is the process of standardizing. Every number in the data set is written in terms of the number of standard deviations it is from the mean.
+\item A negative $z$ score means that the original value is less than the mean.
+\item The standard normal distribution has mean 0 and standard deviation 1.
+\item Given the $z$ score of a value and the standard deviation of the original distribution, we can use the formula of $z$ score to convert it into the real world value $x$. In this way, we can convert a value in one normal distribution to another normal distribution and make it easy two compare two values in two different normal distributions. 
+\end{itemize}
+
+\subsection{Lesson 16: Normal Distribution}
+\begin{itemize}
+\item PDF: probability density function. The area under the curve represents the probability. We can use calculus or the $Z-$table (for normal distribution) to find the area under the curve. The $Z-$table provides a quick way to find the probability of getting anything less than a given $z$-score. 
+\end{itemize}
+
+\subsection{Lesson 18: Sampling Distributions} 
+\begin{itemize}
+\item Sampling distribution is the distribution of the sample means. 
+\item Standard Error: the standard deviation of the sampling distribution.
+\item Central Limit Theorem: given any distribution, if we keep drawing samples from it and record the sample means, then the distribution of sample means is approximately normal, the standard deviation of the sample means is approximately $\frac{\sigma}{\sqrt{n}}$ where $\sigma$ is the population standard deviation and $n$ is the sample size, and the mean of sample means is approximately the population mean.
+\item If the sample size is 1, the sample means will be the data values, and the distribution will not be normal but follows the population distribution.
+\item The larger the sample size $n$, the smaller the standard error, and the skinnier the sample means distribution. The smaller the sample size $n$, the larger the standard error, the wider the sample means distribution. In general, we want $n$ to be large. 
+\end{itemize}
+\subsection{Conclusion}
+In this course, we learned how to summarize data by measuring its center and its variance. 
+
+\section{Notes from the course Intro to Inferential Statistics in Udacity}
+Materials on how to test your hypothesis and begin to make predictions based on statistical results drawn from data!
+\subsection{Lesson 1: Introduction and review}
+\begin{itemize}
+\item A review of the materials in Lesson 18: Sampling Distribution. 
+\end{itemize}
+
+\subsection{Lesson 2: Estimation}
+\begin{itemize}
+\item Point Estimate. Just use one sample mean to estimate the population mean.
+\item Margin of error: approximately 95\% of sample means fall within $\frac{2\sigma}{\sqrt{n}}$ of the population mean in a normal distribution. Here $\frac{2\sigma}{\sqrt{n}}$ is called the margin of error. 
+\item Interval Estimate. Find a confidence interval which contains the population mean using the assumption that the sample mean is within two standard deviations of the population mean. 
+\end{itemize}
+
+\subsection{Lesson 4: Hypothesis Testing}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 6: t-Test}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 12: One-Way ANOVA}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 14: ANOVA}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 16: Correlation}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 18: Regression}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 20: $X^2$ Tests}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsection{Lesson 22: Final Project}
+\begin{itemize}
+\item 
+\end{itemize}
+\end{document}
